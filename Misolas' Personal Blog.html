@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 31, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<title> The Misolas' Personal Blog </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial;
+}
+
+.square {
+  margin-right: 500px;
+  margin-left: 500px;
+  height: 600px;
+  width: 500px;
+  background: linear-gradient(to bottom, #3D3E98 0%, #C64545 100%);
+  border-style: double;
+  border-width: thick;
+  border-color: #5EFF2D;
+  border-radius: 10px;
+}
+
+.container {
+/* Center myDIV vertically and horizontally*/
+  float: none;
+  position: relative;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+#myDIV {
+  width: 1000px;
+  height: 1000px;
+  background-color: black;
+  border-style: double;
+  border-radius: 20px;
+  opacity: .9;
+  border-color: #4DFFF6;
+  border-width: thick;
+  box-sizing: border-box;
+}
+
+.fa {
+  font-size: 25px;
+  text-decoration: none;
+	}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #3B5998;
+  color: white;
+  border-radius: 10px;
+}
+
+.fa-twitter {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #55ACEE;
+  color: white; 
+  border-radius: 10px;
+}
+
+.fa-instagram {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: linear-gradient(to bottom, #ff33cc 0%, #ff9900 100%);
+  color: white;
+  border-radius: 10px;
+	}
+	
+.fa-youtube {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #bb0000;
+  color: white;
+  border-radius: 10px;
+}
+
+@keyframes mymove {
+  50% {background-color: blue;}
+  
+  
+}
+.heading {
+  font-size: 25px;
+  color: black;
+  margin-right: 25px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: gold;
+  padding: 12px 10px;
+  font-family: Tahoma;
+  border-radius: 100px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.sticky + .content {
+  padding-top: 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: justify;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header .icon {
+  display: block;
+}
+
+
+.dropdown {
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: static;
+  font-size: 20px;    
+  background-color: gold;
+  color: black;
+  padding: 14px 100px;
+  font-family: Tahoma;
+  margin: 0;
+   border-radius: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   border-radius: 1px;
+}
+
+.dropdown-content a {	
+  position: sticky;
+  background-color: white;
+  float: none;
+  color: green;
+  Font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+
+.header a:hover, .dropdown:hover .dropbtn {
+  position: static;  
+  background-color: white;
+  color: brown;
+  Font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  position: sticky;  
+  background-color: green;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  position: sticky;
+  display: block;
+  border-radius: 25px;
+}
+
+.header a.logo {
+  float: none;
+  position: absolute;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -16%);
+}
+
+.header a.logo {
+  float: none;
+  box-sizing: border-box;
+  width: 310px;
+  height: 78px;
+}
+
+.header a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 25px;
+  Font-weight: bold;
+}
+
+.sticky a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 1px;
+  Font-weight: bold;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+}
+
+.sticky a.active {
+  background-color: red;
+  color: white;
+  border-radius: 1px;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .header.responsive .dropdown {float: none;}
+  .header.responsive .dropdown-content {position: relative;}
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    float: right;
+  }  
+  
+.header a.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+ }
+
+ 
+</style>
+<body>
+<body style="background-color: #540F0F; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; text-align:center; font-family:courier; color:white;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" id="myDIV">
+<br>
+<img src="foreigner.jpg" style="float:left;margin: 10px 30px 10px;" width="230" height="300"><h1 style="text-align:left; font-family:Lucida Bright;"><u>Jerico Lorenzo Misolas</u></h1>
+	<table style="width:65%; font-size:20px; text-align:justified; font-family:Century;margin:30px 10px 30px;">
+  <tr>
+    <td><b>Age: 20<b><br>
+	Nationality: Filipino<br>
+	Address: 5080 Malolos St. Brgy. Tejeros Makati City<br>
+	Mother's name: Jenalyn M. Dizon<br>
+	</td>
+	
+    <td><b>Birthday: August 23, 2001<br>
+	Birth place: Makati<br>
+	Phone No.: 09491554912 <br>
+	Father's Name: Angelo C. Mendoza</b><br></td>
+  </tr>
+  
+  </table>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <p style="color:white; text-align:center; font-family:Kristen ITC; font-size:300%">The story of Jelo</p>
+ <p style="color:white; text-align:justify; font-family:Comic Sans MS; font-size:150%; margin:10px 10px 10px 100px;">I'm Jerico Lorenzo Misolas, and I dream of being a professional basketball</p>
+ <p style="color:white; text-align:justify; font-family:Comic Sans MS; font-size:150%; margin:10px 10px 10px 20px;">player, a chef, and a youtuber/streamer. I plan on having my own family with someone<br>
+ who would love me the way I deserve to. I live with my mother, and my biological<br>
+ father is away from us. My step father is Castor Dizon Jr. and he takes care of me<br> 
+ like I am his real son. He's been taking care of me since I was 1 year old. He is an<br>
+ OFW right now, so he is also away from us, he works at Cayman Island, which is a <br>
+ british country. We're gonna live soon in Cavite but the house is still on process<br>
+ so we're still living here in Makati.<br>
+ </p>	
+ <br>
+ <br>
+ <br>
+ <p style="color:white; text-align:center; font-family:Arial; font-size:150%">Days before my birthday:</u></p>
+ <u><p style="font-family:calibri ; font-size:200%" id="countdown"> </p></u>
+ 
+  </div>
+  
+  <div class="square">
+  <br>
+<br>
+<br>
+	<p style="color:#FD4BFF; text-align:center; font-family:Ink Free; font-size:250%;"><b> Hobbies </b></p>
+	<p style="color:white; text-align:center;font-family:Monotype Corsiva; font-size:200%;"> Playing Basketball<br>
+	Vlogging<br>
+	Photography<br>
+	Cooking<br>
+	Writing Poems<br>
+	Writing Stories<br>
+	Gaming<br>
+	Video Editing<br>
+	Travelling<br>
+	Drinking<br>
+	Food Experimenting<br>
+	Acting<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Ink Free; font-size:250%;"><b> Sample photo shots </b></p>
+	<img src="1.jpg" width="756" height="500" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<img src="2.jpg" width="756" height="500" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<img src="3.jpg" width="756" height="500" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<img src="4.jpg" width="756" height="500" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<img src="5.jpg" width="500" height="756" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<img src="6.jpg" width="756" height="500" align="center" style="border-style: double; border-width:thick; border-radius:5px; border: double;">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Ink Free; font-size:250%;"><b> Video Acting </b></p>
+	<br>
+	<br>
+	<iframe width="420" height="345" src="https://www.youtube.com/watch?v=WJgra75HQBY">
+</iframe>
+<br>
+<br>
+	<!-- Add font awesome icons -->
+	<a href="https://www.facebook.com/LuvXprt" class="fa fa-facebook"></a>
+	<a href="https://twitter.com/misolas23" class="fa fa-twitter"></a>
+	<a href="https://www.instagram.com/kdyjlm23/" class="fa fa-instagram"></a>
+	<a href="https://www.youtube.com/channel/UCG7Kg6R7iU4CeQoOtQ24rRg" class="fa fa-youtube"></a>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("home");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+	
+</body>
+</html>
